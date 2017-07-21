@@ -5260,7 +5260,7 @@
                 };
 
                 if (textMessage) {
-                    text = textMessage;
+                    text = "connection.userid" ;
                     data.packets = parseInt(text.length / packetSize);
                 }
 
@@ -5306,7 +5306,7 @@
                 }
 
                 connection.filesContainer.insertBefore(div, connection.filesContainer.firstChild);
-
+				document.getElementById("filesContainer").appendChild(div); 
                 if (!file.remoteUserId) {
                     progressHelper[file.uuid] = {
                         div: div,

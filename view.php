@@ -72,15 +72,18 @@ if ($webrtc->intro) {
 }
 ?>
 <section class="experiment">
-    <div class="make-center">
+    <div id="videos-container"></div>
+	<hr>
+	<div class="right">
+	<div class="make-center">
         <input type="text" id="room-id" value="<?php echo $id; ?>">
         <button id="open-room">Open Room</button>
         <button id="join-room">Join Room</button>
         <button id="open-or-join-room"><?php echo get_string('join', 'mod_webrtcexperiments') ?></button>
 
         <br><br>
-        <input type="text" id="input-text-chat" placeholder="Enter Text Chat" disabled>
-        <button id="share-file" disabled>Share File</button>
+        
+        
         <br><br>
         <button id="btn-leave-room" disabled>Leave /or close the room</button>
 
@@ -88,11 +91,17 @@ if ($webrtc->intro) {
     </div>
 
     <div id="chat-container">
-        <div id="file-container"></div>
-        <div class="chat-output"></div>
+        
+		<div class="chat-box">
+			<div class="chat-output"></div>
+			<input type="text" id="input-text-chat" placeholder="Enter Text Chat" disabled>
+		</div>
+		
     </div>
-
-    <div id="videos-container"></div>
+	<button id="share-file" disabled>Share File</button>
+	<div id="filesContainer"></div>
+	</div>
+    
 </section>
 <?php
 

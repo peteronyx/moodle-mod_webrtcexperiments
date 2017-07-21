@@ -7,10 +7,15 @@ M.mod_webrtcexperiments.init_meeting = function(Y, signalingserver, username) {
     // ......................................................
     document.getElementById('open-room').onclick = function() {
         disableInputButtons();
-        connection.open(document.getElementById('room-id').value, function() {
+        if(isRoomExists) {
+                connection.join(document.getElementById('room-id').value);
+            }
+		else {
+			connection.open(document.getElementById('room-id').value, function() {
             showRoomURL(connection.sessionid);
-        });
-    };
+			});
+		}
+	};
     document.getElementById('join-room').onclick = function() {
         disableInputButtons();
         connection.join(document.getElementById('room-id').value);

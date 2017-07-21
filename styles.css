@@ -2,6 +2,13 @@ video {
     object-fit: fill;
     width: 30%;
 }
+button#open-or-join-room {
+    display: none;
+}
+.media-container {
+    width: 30% !important;
+    
+}
 button,
 input,
 select {
@@ -16,4 +23,104 @@ select {
 .make-center {
     text-align: center;
     padding: 5px 10px;
+}
+.experiment {
+    display: inline-flex;
+    width: 100%;
+}
+.right {
+    width: 23%;
+}
+div#videos-container {
+    width: 77%;
+    height: 100%;
+    border-right: 1px solid red;
+    min-height: 300px;
+}
+
+input#room-id {
+    width: 80%;
+    border: 1px solid red;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+input[disabled], input:disabled, button:disabled {
+    display: none !important;
+}
+
+.chat-output::-webkit-scrollbar {
+    border-radius: 12px;
+    width: 15px;
+    background-color: #d7d8d4;
+}
+.chat-output::-webkit-scrollbar-thumb {
+    /* color: red; */
+    background-color: #5a615a;
+    border-radius: 10px;
+}
+
+.chat-output {
+    height: calc(100% - 35px);
+    display: inline-block;
+    float: right;
+    width: 97%;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    text-align: right;
+    padding-right: 8px;
+	font-size: 12px;
+    font-weight: 600;
+}
+.chat-output div {
+    /*float: right;*/
+}
+
+.chat-output div:focus {
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+.chat-box {
+    height: 300px;
+    width: 78%;
+    border: 2px solid gray;
+    margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 10px;
+	overflow: hidden;
+	border-radius:10px;
+}
+div#file-container {
+    height: 35px;
+    width: 95%;
+    /*border: 1px solid red;*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+input#input-text-chat {
+    width: 95%;
+	border-top: 1px solid black;
+}
+
+@media screen and (max-width: 600px) {
+	.experiment {
+    display: block;
+	}
+	div#videos-container {
+    width: 100%;
+    border-right: none;
+    min-height: 300px;
+	border-bottom: 1px solid black;
+	}
+	.make-center, .right {
+    width: 100%;
+	}
+	
 }
